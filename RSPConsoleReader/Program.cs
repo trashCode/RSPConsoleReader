@@ -51,14 +51,13 @@ namespace RSPConsoleReader
 
             //Pour le premier 
             RspFile retour0 = retours.First();//First est une methode etendues, definie par linq.
-            /*
             foreach (string line in retour0.rawEntite){
                 int pad = 0;
                 Int32.TryParse(line.Substring(3, 2), out pad);
                 if (pad == 99) { pad = 12; } else { pad *= 2; }
                 Console.WriteLine("{0}",line.Substring(0,3).PadLeft(pad));
             }
-            */
+
             /*Console.WriteLine("retour0 : {0} entites, {1} lines ", retour0.entites.Count , retour0.rawEntite.Count() );
             foreach (Entite e in retour0.entites)
             {
