@@ -11,6 +11,8 @@ namespace RSPConsoleReader
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             string rspPath = @"H:\FichiersB2\retours\69080041\";
@@ -51,15 +53,19 @@ namespace RSPConsoleReader
             }
 
             //Pour le premier : affichage de l'arbre des entités
-            /*    
+            
             RspFile retour0 = retours.First();//First est une methode etendues, definie par linq.
+            Entite premiere = retour0.entites[0];
+            premiere.display();
+            
+            /*
             foreach (string line in retour0.rawEntite){
                 int pad = 0;
                 Int32.TryParse(line.Substring(3, 2), out pad);
                 if (pad == 99) { pad = 12; } else { pad *= 2; }
                 Console.WriteLine("{0}",line.Substring(0,3).PadLeft(pad));
-            }
-            */
+            }*/
+            
 
             /*Console.WriteLine("retour0 : {0} entites, {1} lines ", retour0.entites.Count , retour0.rawEntite.Count() );
             foreach (Entite e in retour0.entites)
@@ -71,7 +77,8 @@ namespace RSPConsoleReader
              * Operations de tri
              ************************************/
             
-            
+            /*
+             
             //on affiche les 10 premiers retours:
             for (int i = 0; i < 10; i++)
             {
@@ -106,10 +113,15 @@ namespace RSPConsoleReader
             {
                 Console.WriteLine("{0} , {1}", retours[i].filePath, (new FileInfo(retours[i].filePath)).LastWriteTime );
             }
+             
+            
+            */
 
             /************************************
              * Operations de filtrage
              ************************************/
+
+            /*
 
             //Les retours avec plus de 100 entites
             Predicate<RspFile> test = delegate(RspFile f) { return f.rawEntite.Count() > 450; };
@@ -129,8 +141,17 @@ namespace RSPConsoleReader
             {
                 Console.WriteLine("{0} {1}", f.filePath, f.rawEntite.Count());
             }
+            */
 
+        }
 
+        void displayEntite(Entite e)
+        {
+            Console.WriteLine("{0} {1}", e.level, e.type);
+            foreach (Entite e2 in e.subs)
+            {
+                displayEntite(e2);
+            }
         }
     }
 }

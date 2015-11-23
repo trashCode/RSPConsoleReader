@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSPConsoleReader", "RSPCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rspDll", "rspDll\rspDll.csproj", "{3A131C20-1E6C-4706-B920-CDE50D57D103}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RspGuiReader", "RspGuiReader\RspGuiReader.csproj", "{C0587BA7-081B-45BE-BE69-40405E21B2A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3A131C20-1E6C-4706-B920-CDE50D57D103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A131C20-1E6C-4706-B920-CDE50D57D103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A131C20-1E6C-4706-B920-CDE50D57D103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0587BA7-081B-45BE-BE69-40405E21B2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0587BA7-081B-45BE-BE69-40405E21B2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0587BA7-081B-45BE-BE69-40405E21B2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0587BA7-081B-45BE-BE69-40405E21B2A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
